@@ -13,18 +13,42 @@ Future Enhancements: JavaScript, Backend Integration
 ✅ User-Friendly UI – Clean and structured interface for better readability.
 
 📂 Project Structure
+The-Organic-Route/
+│── index.html               # Home Page  
+│── signup.html              # Signup Page  
+│── login.html               # Login Page  
+│── services.html            # Services Overview Page  
+│  
+├── body-care/               # Body Care Section  
+│   ├── body-care.html       # Body Care Main Page  
+│   ├── hair-care.html       # Hair Care Subsection  
+│   ├── face-care.html       # Face Care Subsection  
+│   ├── lip-care.html        # Lip Care Subsection  
+│  
+├── healthy-food/            # Healthy Packaged Food Section  
+│   ├── healthy-food.html    # Healthy Food Main Page  
+│  
+├── medicine-alternatives/   # Medicine Alternatives Section  
+│   ├── medicine.html        # Medicine Alternatives Main Page  
+│  
+├── homemade-alternatives/   # Homemade Alternatives Section  
+│   ├── homemade.html        # DIY Organic Products Main Page  
+│  
+├── assets/                  # Images, Icons, and Media  
+│  
+├── styles/                  # CSS Files  
+│   ├── styles.css           # Global Styles  
+│   ├── signup.css           # Signup Page Styles  
+│   ├── login.css            # Login Page Styles  
+│   ├── services.css         # Services Page Styles  
+│  
+└── scripts/                 # JavaScript Files (If Needed)  
+    ├── main.js              # Main JavaScript File
 
-/The-Organic-Route
-│── /assets              # Images & static files  
-│── /css                 # Stylesheets  
-│── /js                  # JavaScript files (planned for future)  
-│── index.html           # Homepage  
-│── signup.html          # Signup Page  
-│── login.html           # Login Page  
-│── services.html        # Main content page  
-│── README.md            # Project documentation
+
 
 🚀 Future Enhancements
+
 Interactive Features – Personalized dashboards and user recommendations
 Backend Integration – Database for user accounts and preferences
 AI-Based Ingredient Analyzer – To scan and analyze product ingredients
