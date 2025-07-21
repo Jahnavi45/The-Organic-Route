@@ -1,0 +1,208 @@
+/* Basic Reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Segoe UI',Arial,sans-serif;
+  color:#333;
+  background:#f7f9f8;
+  line-height:1.6;
+}
+
+/* Navbar */
+.navbar{
+  width:100%;
+  background:#000;
+  color:#fff;
+  padding:12px 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+.nav-left{display:flex;align-items:center;gap:10px;}
+.nav-logo{width:48px;height:48px;border-radius:50%;object-fit:cover;}
+.nav-title{font-size:1.4rem;font-weight:700;white-space:nowrap;}
+.nav-right a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:24px;
+  font-weight:600;
+  transition:opacity .2s;
+}
+.nav-right a:hover{opacity:.8;}
+
+/* Hero */
+.diy-hero{
+  text-align:center;
+  padding:70px 16px 48px;
+  background:#e6f7ec;
+}
+.diy-hero h1{
+  font-size:2.4rem;
+  margin-bottom:12px;
+  color:#1a7c3c;
+}
+.diy-hero p{max-width:600px;margin:0 auto;color:#555;font-size:1.1rem;}
+
+/* Tabs */
+.diy-tabs-wrap{
+  display:flex;
+  justify-content:center;
+  gap:16px;
+  margin:32px auto 16px;
+  flex-wrap:wrap;
+}
+.diy-tab-btn{
+  background:#fff;
+  border:2px solid #1a7c3c;
+  color:#1a7c3c;
+  padding:10px 26px;
+  border-radius:24px;
+  font-size:1rem;
+  font-weight:600;
+  cursor:pointer;
+  transition:all .25s;
+}
+.diy-tab-btn.active,
+.diy-tab-btn:hover{
+  background:#1a7c3c;
+  color:#fff;
+}
+
+/* Search */
+.diy-search-wrap{
+  width:100%;
+  max-width:400px;
+  margin:0 auto 32px;
+  padding:0 16px;
+}
+#diySearch{
+  width:100%;
+  padding:12px 16px;
+  font-size:1rem;
+  border:2px solid #cde5d6;
+  border-radius:8px;
+  outline:none;
+}
+#diySearch:focus{border-color:#1a7c3c;}
+
+/* Panels */
+.diy-panels{width:100%;max-width:1200px;margin:0 auto;padding:0 16px 80px;}
+.diy-panel{display:none;}
+.diy-panel.active{display:block;}
+
+/* Cards Grid */
+.diy-card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+  gap:24px;
+}
+
+/* Card */
+.diy-card{
+  background:#fff;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 4px 16px rgba(0,0,0,.08);
+  display:flex;
+  flex-direction:column;
+  text-align:left;
+  transition:transform .2s;
+}
+.diy-card:hover{transform:translateY(-4px);}
+.diy-card-imgwrap{width:100%;height:160px;overflow:hidden;background:#eee;}
+.diy-card-imgwrap img{width:100%;height:100%;object-fit:cover;}
+.diy-card-body{padding:16px;display:flex;flex-direction:column;gap:12px;flex:1;}
+.diy-card-title{font-size:1.2rem;font-weight:700;color:#1a7c3c;}
+.diy-card-short{font-size:.95rem;color:#555;flex:1;}
+.diy-card-actions{text-align:right;}
+.diy-card-actions button{
+  padding:8px 16px;
+  font-size:.95rem;
+  border:none;
+  border-radius:6px;
+  background:#1a7c3c;
+  color:#fff;
+  cursor:pointer;
+  transition:opacity .2s;
+}
+.diy-card-actions button:hover{opacity:.85;}
+
+/* Modal */
+.diy-modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  z-index:200;
+}
+.diy-modal.show{display:block;}
+.diy-modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.55);
+}
+.diy-modal-content{
+  position:relative;
+  margin:60px auto;
+  max-width:700px;
+  width:calc(100% - 32px);
+  max-height:calc(100vh - 120px);
+  overflow-y:auto;
+  background:#fff;
+  border-radius:12px;
+  padding:32px 24px 48px;
+  text-align:left;
+}
+.diy-modal-close{
+  position:absolute;
+  top:12px;
+  right:16px;
+  background:none;
+  border:none;
+  font-size:2rem;
+  line-height:1;
+  cursor:pointer;
+  color:#888;
+}
+.diy-modal-close:hover{color:#000;}
+.diy-modal-content h2{font-size:1.8rem;color:#1a7c3c;margin-bottom:8px;}
+#diyModalShort{font-size:1rem;color:#555;margin-bottom:24px;}
+.diy-modal-content h3{
+  margin:24px 0 8px;
+  font-size:1.2rem;
+  color:#1a7c3c;
+}
+#diyModalIngr,
+#diyModalSteps,
+#diyModalBens{
+  margin-left:18px;
+  font-size:1rem;
+  color:#333;
+}
+#diyModalIngr li,
+#diyModalBens li{margin-bottom:4px;list-style:disc;}
+#diyModalSteps li{margin-bottom:8px;list-style:decimal;}
+
+/* Video */
+.diy-video-wrap{
+  margin-top:32px;
+  width:100%;
+  aspect-ratio:16/9;
+  background:#000;
+  border-radius:8px;
+  overflow:hidden;
+}
+.diy-video-wrap iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
+/* Responsive tweaks */
+@media (max-width:480px){
+  .diy-hero h1{font-size:2rem;}
+  .nav-right a{margin-left:16px;}
+  .diy-modal-content{padding:24px 16px 40px;}
+}

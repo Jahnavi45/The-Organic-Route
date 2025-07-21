@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>DIY Organic Recipes | The Organic Route</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="diy.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <img src="Tor.jpg" alt="The Organic Route" class="nav-logo" />
+      <span class="nav-title">The ORGANIC ROUTE</span>
+    </div>
+    <nav class="nav-right">
+      <a href="index.html"><b>Home</b></a>
+      <a href="services.html"><b>Services</b></a>
+      <a href="dashboard.html"><b>Dashboard</b></a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="diy-hero">
+    <h1>DIY Organic Products</h1>
+    <p>Make safe, natural Body Care & Food at home. Simple ingredients. Big health wins.</p>
+  </section>
+
+  <!-- Tabs -->
+  <div class="diy-tabs-wrap">
+    <button class="diy-tab-btn active" data-tab="bodycare">Body Care</button>
+    <button class="diy-tab-btn" data-tab="food">Food Products</button>
+  </div>
+
+  <!-- Search -->
+  <div class="diy-search-wrap">
+    <input type="text" id="diySearch" placeholder="Search DIY recipes..." />
+  </div>
+
+  <!-- Tab Panels -->
+  <main class="diy-panels">
+    <!-- Body Care Panel -->
+    <section id="tab-bodycare" class="diy-panel active">
+      <div id="bodycareCards" class="diy-card-grid"></div>
+    </section>
+
+    <!-- Food Panel -->
+    <section id="tab-food" class="diy-panel">
+      <div id="foodCards" class="diy-card-grid"></div>
+    </section>
+  </main>
+
+  <!-- Modal -->
+  <div id="diyModal" class="diy-modal" aria-hidden="true">
+    <div class="diy-modal-backdrop" data-close="modal"></div>
+    <div class="diy-modal-content" role="dialog" aria-modal="true" aria-labelledby="diyModalTitle">
+      <button class="diy-modal-close" data-close="modal" aria-label="Close">&times;</button>
+      <h2 id="diyModalTitle"></h2>
+      <p id="diyModalShort"></p>
+
+      <h3>Ingredients</h3>
+      <ul id="diyModalIngr"></ul>
+
+      <h3>Instructions</h3>
+      <ol id="diyModalSteps"></ol>
+
+      <h3>Benefits</h3>
+      <ul id="diyModalBens"></ul>
+
+      <div id="diyModalVideoWrap" class="diy-video-wrap"></div>
+    </div>
+  </div>
+
+  <script src="diy.js"></script>
+</body>
+</html>

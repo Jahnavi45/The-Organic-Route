@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Organic Route</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <img src="TOR.jpg" alt="The Organic Route" class="logo">
+        <span class="nav-title">The ORGANIC ROUTE</span>
+        <div class="nav-links">
+            <a href="#home" onclick="scrollToSection('home')">Home</a>
+            <a href="#about" onclick="scrollToSection('about')">About Us</a>
+            <a href="#features" onclick="scrollToSection('features')">Features</a>
+            <a href="#why-choose-us" onclick="scrollToSection('why-choose-us')">Why Choose Us</a>
+            <a href="#get-started" onclick="scrollToSection('get-started')">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="section bg-home">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1 class="heading">Ditch the Toxins, <br> Embrace the Greens!</h1>
+            <p class="subtext">
+                Join the revolution towards a chemical-free lifestyle. Learn, explore, 
+                and thrive with organic alternatives designed for you and your family.
+            </p>
+            <div class="buttons">
+                <button class="discover-btn" onclick="redirectToScanner()">Scan Ingredients</button>
+                <button class="start-btn" onclick="scrollToSection('get-started')">Start Your Journey</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="section bg-about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2 class="about-heading">Who We Are</h2>
+                <p class="about-paragraph">
+                    At The Organic Route, we believe knowledge is the first step to a healthier life. Our mission is to arm you with the information you need to make informed choices about the products you use every day. From body care to food, we’re here to guide you through the maze of harmful chemicals and into the sunlight of organic living.
+                </p>
+                <p class="about-paragraph">
+                    Empowering you to make healthier choices!
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="Organic2.jpeg" alt="Organic Products">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
+        <div class="features-container">
+            <div class="feature">
+                <img src="feature1.jpeg" alt="Ingredient Analysis" class="feature-icon">
+                <div class="feature-text">
+                    <h3 class="feature-title">Ingredient Analysis</h3>
+                    <p class="feature-description">
+                        Unpack the labels and unveil the truth about what’s really in your products. Ditch the Toxicity.
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <img src="feature2.jpeg" alt="DIY Recipes" class="feature-icon">
+                <div class="feature-text">
+                    <h3 class="feature-title">DIY Recipes</h3>
+                    <p class="feature-description">
+                        Get your hands dirty and create your own organic wonders right at home! Feel safe & Free.
+                    </p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <img src="feature3.jpeg" alt="Gamified Learning" class="feature-icon">
+                <div class="feature-text">
+                    <h3 class="feature-title">Gamified Learning</h3>
+                    <p class="feature-description">
+                        Turn your organic education into a fun, engaging game. Who said learning can't be exciting?
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- What We Offer Section -->
+<section id="what-we-offer" class="what-we-offer">
+    <div class="offer-container">
+        <!-- Left Side: Image -->
+        <div class="offer-image">
+            <img src="Organic4.jpeg" alt="Organic Products">
+        </div>
+
+        <!-- Right Side: Content -->
+        <div class="offer-text">
+            <h2 class="offer-heading">What We Offer</h2>
+            <p class="offer-description">
+                Your one-stop shop for everything organic, from education to community support.
+            </p>
+
+            <!-- Offer Points in One Line -->
+            <div class="offer-points">
+                <div class="offer-item">
+                    <h3 class="offer-point">✅ Interactive Learning</h3>
+                    <p class="offer-detail">
+                        Dive into an engaging world where education meets excitement!
+                    </p>
+                </div>
+
+                <div class="offer-item">
+                    <h3 class="offer-point">✅ Community Support</h3>
+                    <p class="offer-detail">
+                        Join a tribe of like-minded individuals on the same journey to health.
+                    </p>
+                </div>
+
+                <div class="offer-item">
+                    <h3 class="offer-point">✅ Expert Insights</h3>
+                    <p class="offer-detail">
+                        Get advice from trusted professionals who know organic inside and out.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    
+<!-- Why Choose Us Section -->
+<section id="why-choose-us" class="why-choose-section">
+    <div class="why-choose-container">
+        <!-- Left Side: Text Content -->
+        <div class="why-choose-text">
+            <h2 class="why-title">Why Choose Us?</h2>
+            <p class="why-description">
+                Your guide to navigating the confusing world of organic products with ease and confidence.
+            </p>
+
+            <div class="why-point">
+                <h3 class="why-subtitle">Trusted Brand Recommendations</h3>
+                <p class="why-point-description">
+                    Say goodbye to guesswork! We've done the homework so you don't have to.
+                </p>
+            </div>
+
+            <div class="why-point">
+                <h3 class="why-subtitle">Chemical Identification</h3>
+                <p class="why-point-description">
+                    Learn to spot the nasties hiding in your everyday products like a pro detective.
+                </p>
+            </div>
+
+            <div class="why-point">
+                <h3 class="why-subtitle">Sustainable Living Tips</h3>
+                <p class="why-point-description">
+                    Reduce your carbon footprint while living your best eco-friendly life!
+                </p>
+            </div>
+        </div>
+
+        <!-- Right Side: Image -->
+        <div class="why-choose-image">
+            <img src="Organic3.jpeg" alt="Organic Living">
+        </div>
+    </div>
+</section>
+
+   <!-- Get Started Section -->
+<section id="get-started" class="get-started">
+    <div class="get-started-content">
+        <h2>Ready to Transform Your Life?</h2>
+        <p>Join a community that’s ditching the chemicals and embracing the organic lifestyle. 
+           Your health (and the planet) will thank you!</p>
+        <button class="join-btn" onclick="window.location.href='signup.html'">Join Our Community</button>
+    </div>
+    <div class="get-started-image">
+        <img src="Organic6.jpeg" alt="Get Started Image">
+    </div>
+</section>
+
+    <!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-text">
+            <h3 class="footer-title">The Organic Route</h3>
+            <p class="footer-description">
+                Your path to a healthier, chemical-free life begins now.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a>
+            <a href="#">FAQs</a>
+            <a href="#">Blog</a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 All Rights Reserved</p>
+
+            <!-- Social Media Icons -->
+            <div class="footer-icons">
+                <img src="Instalogo.jpg" alt="Instagram" class="social-icon">
+                <img src="Xlogo.jpg" alt="X (Twitter)" class="social-icon">
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- JavaScript for Smooth Scrolling -->
+<script src="script.js"></script>
+</script>
+</body>
+</html>

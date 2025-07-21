@@ -1,0 +1,754 @@
+/* General Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+}
+
+/* TOR Logo */
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+/*Website Title*/
+.nav-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #5bd791;
+}
+
+.nav-links{
+    margin-left: auto;
+}
+
+/* Navbar Links */
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #4CAF50;
+}
+
+/* Sections */
+.section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+}
+
+/* Home Section Background */
+.bg-home {
+    background: url('Organic1.jpeg') no-repeat center center/cover;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for better visibility */
+}
+
+.content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    text-align: center;
+}
+
+/* Home Section Text */
+.heading {
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.subtext {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    border: none;
+    padding: 15px 30px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.discover-btn {
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.discover-btn:hover {
+    background-color: white;
+    color: black;
+}
+
+.start-btn {
+    background-color: #4CAF50;
+}
+
+.start-btn:hover {
+    background-color: #45a049;
+}
+
+/* About Us Section */
+.bg-about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 10%;
+    background-color: #f2fbf6; /* Light background */
+}
+
+.about-container {
+    display: flex;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Side - Text */
+.about-text {
+    flex: 1;
+    text-align: left;
+    color: #333;
+    padding-right: 40px;
+}
+
+.about-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+}
+
+.about-paragraph {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+
+/* Right Side - Image */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.about-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Features Section */
+.features-section {
+    background-color: #f0f8f0; /* Light green background */
+    padding: 50px 10%;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Individual Feature */
+.feature {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+/* Feature Icon */
+.feature-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+/* Feature Text */
+.feature-text {
+    text-align: left;
+}
+
+.feature-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.feature-description {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* What we Offer */
+.what-we-offer {
+    padding: 80px 10%;
+    background-color: #f4f8ec;
+    display: block;
+}
+
+.offer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    min-height: 500px;
+}
+
+.offer-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.offer-text {
+    flex: 1;
+    color: #2d2d2d;
+}
+
+.offer-heading {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c7c31;
+}
+
+.offer-description {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Offer Points in One Row */
+.offer-points {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.offer-item {
+    flex: 1;
+    text-align: center;
+}
+
+.offer-point {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2c7c31;
+}
+
+.offer-detail {
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+/* Why Choose Us Section */
+.why-choose-section {
+    padding: 50px 10%;
+    background-color: white; /* No Background Image */
+}
+
+.why-choose-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Left Side: Text Content */
+.why-choose-text {
+    flex: 1;
+    text-align: left;
+}
+
+.why-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.why-description {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Why Choose Points */
+.why-point {
+    margin-bottom: 20px;
+}
+
+.why-subtitle {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 5px;
+}
+
+.why-point-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Right Side: Image */
+.why-choose-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.why-choose-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Get Started Section */
+.get-started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 10%;
+    background-color: #f8fdf5; /* Light Greenish Background */
+}
+
+.get-started-content {
+    flex: 1;
+    max-width: 50%;
+    text-align: center;  /* Centering content */
+}
+
+.get-started-content h2 {
+    font-size: 2rem;
+    color: #4CAF50;
+    margin-bottom: 15px;
+}
+
+.get-started-content p {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+/* Single Centered Button */
+.join-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+    display: block;
+    margin: 0 auto; /* Centering the button */
+}
+
+.join-btn:hover {
+    background-color: #45a049;
+}
+
+/* Image */
+.get-started-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.get-started-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 10%;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.footer-description {
+    font-size: 16px;
+    margin: 10px 0 20px;
+    color: #ccc;
+}
+
+.footer-links {
+    margin-bottom: 20px;
+}
+
+.footer-links a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Bottom Section */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #666;
+    padding-top: 20px;
+}
+
+/* Social Icons */
+.footer-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+@keyframes backgroundScroll {
+    0% { background-image: url('Organic1.jpeg'); }
+    33% { background-image: url('Organic12.jpeg'); }
+    66% { background-image: url('Organic13.jpeg'); }
+    100% { background-image: url('Organic1.jpeg'); }
+}
+
+.bg-home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: backgroundScroll 20s infinite linear;
+}
+
+
+/* Signup Page Styling */
+/*a Separe CSS file is Attached*/
+  /* login page email and password ka alignment */
+/*a Separe CSS file is Attached*/
+
+
+/* Services Page Styling */
+/* Navbar Fix */
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.nav-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Services Section */
+.services-section {
+    background-color: #f0f8f0;
+    text-align: center;
+    padding: 80px 20px 50px;
+}
+
+.services-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222; /* Darker Text */
+    margin-bottom: 15px;
+    margin-top: 40px;
+}
+
+/* Centered Grid */
+.grid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Square Grid Items */
+.grid-item {
+    width: 250px;  /* Fixed Square Size */
+    height: 300px; /* Maintain Box Shape */
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+/* Grid Titles */
+.grid-item h3 {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* Grid Images */
+.grid-item img {
+    width: 100%;
+    height: 140px; /* Balanced Height */
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Grid Description */
+.grid-item p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Grid Titles - Visibility Fix */
+.grid-item h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333; /* Darker color for visibility */
+    text-transform: uppercase; /* Better readability */
+}
+
+/*body-care Design*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+    color: white;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.nav-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00c853;
+}
+
+/* Body Care Section */
+.body-care {
+    background-color: #f0f8f0;
+    text-align: center;
+    padding: 80px 20px 50px;
+}
+
+.body-care-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222;
+    margin-bottom: 40px;
+}
+
+/* Body Care Grid */
+.body-care-grid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;  /* Reduced gap */
+    padding: 20px;
+    margin-bottom: 150px;
+}
+
+/* Care Boxes */
+.care-box {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 250px;  /* Increased width */
+    transition: transform 0.3s;
+    position: relative;
+}
+
+.care-box:hover {
+    transform: scale(1.05);
+}
+
+.care-box img {
+    width: 150px;  /* Increased image size */
+    height: 150px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.care-box h3 {
+    font-size: 20px;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+/* Subcategories */
+.subcategories {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px 0;
+    border-radius: 8px;
+    bottom: -150px;
+    left: 0;
+}
+
+.subcategories a {
+    display: block;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.subcategories a:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.care-box:hover .subcategories {
+    display: block;
+}
+/* Blinking / Pulsing effect for Scan Ingredients button */
+.discover-btn {
+    animation: pulseEffect 1s infinite;
+    transition: transform 0.3s ease-in-out;
+}
+
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50;
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px #4CAF50, 0 0 40px #4CAF50;
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 10px #4CAF50, 0 0 20px #4CAF50;
+    }
+}

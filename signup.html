@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="TOR.jpg" alt="The Organic Route" class="logo">
+            <span class="nav-title">The ORGANIC ROUTE</span>
+        </div>
+    </nav>
+
+    <!-- Signup Container -->
+    <div class="signup-container">
+        <h2>Create Your Account</h2>
+        <form id="signup-form" novalidate>
+            <div class="form-row">
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your First Name" required>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your Last Name" required>
+            </div>
+            <div class="form-row">
+                <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your Mobile Number" required>
+            </div>
+            <div class="form-row">
+                <input type="date" id="dob" name="dob" required>
+                <input type="number" id="age" name="age" placeholder="Your Age" readonly required>
+            </div>
+            <div class="form-row">
+                <input type="password" id="password" name="password" placeholder="Create your Password" required>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your Password" required>
+            </div>
+            <button id="signupBtn" type="submit">Sign Up</button>
+        </form>
+        <p>
+            By clicking the sign up button, you agree to our
+            <a href="#">Terms and Conditions</a> and
+            <a href="#">Privacy Policy</a>
+        </p>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+        <p id="signupStatus" style="margin-top:10px; font-size:14px;"></p>
+    </div>
+
+    <!-- Age Auto Calculate -->
+    <script>
+        document.getElementById('dob').addEventListener('change', function () {
+            const dob = new Date(this.value);
+            if (isNaN(dob)) return;
+            const today = new Date();
+            let age = today.getFullYear() - dob.getFullYear();
+            const m = today.getMonth() - dob.getMonth();
+            if (m < 0 || (m === 0 && today.getDate() < dob.getDate())) age--;
+            document.getElementById('age').value = age;
+        });
+    </script>
+
+    <!-- Only ONE handler file -->
+    <script src="signup.js" defer></script>
+</body>
+</html>

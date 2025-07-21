@@ -1,0 +1,103 @@
+<script>
+    // Redirect to login if not logged in
+    if (!localStorage.getItem("token")) {
+        window.location.href = "login.html";
+    }
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - The Organic Route</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="TOR.jpg" alt="The Organic Route" class="logo">
+            <span class="nav-title">The ORGANIC ROUTE</span> 
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="javascript:void(0)" onclick="logoutUser()">Logout</a>
+        </div>
+    </nav>
+
+    <section class="services-section">
+        <h2 class="services-heading">Our Services</h2>
+    
+        <div class="grid-container">
+            <div class="grid-item" onclick="window.location.href='body-care.html'">
+                <h3>Body Care</h3>
+                <img src="Service1.jpeg" alt="Body Care">
+                <p>Discover organic skincare products free from harmful chemicals.</p>
+            </div>
+    
+            <div class="grid-item" onclick="window.location.href='healthy-food.html'">
+                <h3>Healthy Packaged Food</h3>
+                <img src="Service2.jpeg" alt="Healthy Packaged Food">
+                <p>Choose safe, organic food options for a healthier diet.</p>
+            </div>
+    
+            <div class="grid-item" onclick="window.location.href='medicine.html'">
+                <h3>Medicine Alternatives</h3>
+                <img src="Service3.jpeg" alt="Medicine Alternatives">
+                <p>Switch to natural, non-toxic alternatives for common medicines.</p>
+            </div>
+    
+            <div class="grid-item" onclick="window.location.href='diy-body-care.html'">
+                <h3>DIY Body Care</h3>
+                <img src="Service4.jpeg" alt="DIY Body Care">
+                <p>Make your own organic skincare products at home.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-text">
+                <h3 class="footer-title">The Organic Route</h3>
+                <p class="footer-description">
+                    Your path to a healthier, chemical-free life begins now.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+                <a href="#">Contact Us</a>
+                <a href="#">FAQs</a>
+                <a href="#">Blog</a>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 All Rights Reserved</p>
+
+                <!-- Social Media Icons -->
+                <div class="footer-icons">
+                    <img src="Instalogo.jpg" alt="Instagram" class="social-icon">
+                    <img src="Xlogo.jpg" alt="X (Twitter)" class="social-icon">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auth + Guard -->
+    <script src="auth.js" defer></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            if (typeof checkAuth === 'function') {
+                checkAuth();
+            }
+        });
+    </script>
+</body>
+</html>

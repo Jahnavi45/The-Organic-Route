@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - The Organic Route</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <img src="TOR.jpg" alt="The Organic Route" class="logo">
+            <span class="nav-title">The ORGANIC ROUTE</span>
+        </div>
+        <div class="nav-links">
+            <a href="services.html">Services</a>
+            <a href="scanner.html">Scan Ingredients</a>
+            <button class="logout-btn" onclick="logout()">Logout</button>
+        </div>
+    </nav>
+
+    <!-- Dashboard Content -->
+    <section class="dashboard-container">
+        <h2 id="welcome-message">Welcome!</h2>
+
+        <div class="dashboard-grid">
+            <!-- Last Scan Card -->
+            <div class="dashboard-card">
+                <h3>Last Scanned Product</h3>
+                <p id="last-scan">No scan history available.</p>
+                <button onclick="goToScanner()">Scan Now</button>
+            </div>
+
+            <!-- Quick Links Card -->
+            <div class="dashboard-card">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="body-care.html">Body Care</a></li>
+                    <li><a href="healthy-food.html">Healthy Packaged Food</a></li>
+                    <li><a href="medicine.html">Medicine Alternatives</a></li>
+                    <li><a href="diy-body-care.html">DIY Body Care</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 The Organic Route. All rights reserved.</p>
+    </footer>
+
+    <script src="dashboard.js" defer></script>
+</body>
+</html>

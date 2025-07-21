@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Organic Route - Ingredient Scanner</title>
+    <link rel="stylesheet" href="scanner.css">
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4/dist/tesseract.min.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="TOR.jpg" alt="The Organic Route Logo" class="logo">
+            <span class="logo-text">The ORGANIC ROUTE</span>
+        </div>
+        <a href="index.html" class="home-link"><b>HOME</b></a>
+    </nav>
+
+    <div class="container">
+        <h1>Scan Your INGREDIENTS</h1>
+        <p class="subtext">Upload your Product's Ingredient list and know the Toxicity level.</p>
+        <button id="scanBtn" class="scan-btn">Scan Here</button>
+    </div>
+
+    <!-- Scan Modal -->
+    <div id="scanModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Product Information</h2>
+            <form id="scanForm">
+                <div class="form-group">
+                    <label for="category">Category:</label>
+                    <select id="category" name="category" required>
+                        <option value="">Select Category</option>
+                        <option value="bodycare">Body Care</option>
+                        <option value="food">Packaged Food</option>
+                        <option value="medicine">Medicine</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="subcategoryGroup">
+                    <label for="subcategory">Subcategory:</label>
+                    <select id="subcategory" name="subcategory">
+                        <option value="">Select Subcategory</option>
+                        <!-- Body Care Subcategories -->
+                        <option value="body cleanser" class="bodycare">Body Cleanser</option>
+                        <option value="body lotion" class="bodycare">Body Lotion</option>
+                        <option value="conditioner" class="bodycare">Conditioner</option>
+                        <option value="deodorant" class="bodycare">Deodorant</option>
+                        <option value="face mask" class="bodycare">Face Mask</option>
+                        <option value="face scrub" class="bodycare">Face Scrub</option>
+                        <option value="face serum" class="bodycare">Face Serum</option>
+                        <option value="face wash" class="bodycare">Face Wash</option>
+                        <option value="hair oil" class="bodycare">Hair Oil</option>
+                        <option value="hazel" class="bodycare">Hazel</option>
+                        <option value="lip balm" class="bodycare">Lip Balm</option>
+                        <option value="moisturizer" class="bodycare">Moisturizer</option>
+                        <option value="serum" class="bodycare">Serum</option>
+                        <option value="shampoo" class="bodycare">Shampoo</option>
+                        <option value="soap" class="bodycare">Soap</option>
+                        <option value="toner" class="bodycare">Toner</option>
+                        
+                        <!-- Packaged Food Subcategories -->
+                        <option value="almond milk" class="food">Almond Milk</option>
+                        <option value="apple cider vinegar" class="food">Apple Cider Vinegar</option>
+                        <option value="baked chips" class="food">Baked Chips</option>
+                        <option value="chyawanprash" class="food">Chyawanprash</option>
+                        <option value="coconut sugar" class="food">Coconut Sugar</option>
+                        <option value="cornflakes" class="food">Cornflakes (Chemical-Free)</option>
+                        <option value="detox water" class="food">Detox Water</option>
+                        <option value="dried fruits mix" class="food">Dried Fruits Mix</option>
+                        <option value="energy bars" class="food">Energy Bars</option>
+                        <option value="flaxseed snacks" class="food">Flaxseed Snacks</option>
+                        <option value="fruit jam" class="food">Fruit Jam</option>
+                        <option value="ghee" class="food">Ghee (A2, Homemade)</option>
+                        <option value="granola" class="food">Granola</option>
+                        <option value="herbal tea" class="food">Herbal Tea</option>
+                        <option value="millet noodles" class="food">Instant Millet Noodles</option>
+                        <option value="jaggery powder" class="food">Jaggery Powder</option>
+                        <option value="lemon pickle" class="food">Lemon Pickle</option>
+                        <option value="millet pasta" class="food">Millet Pasta</option>
+                        <option value="muesli" class="food">Muesli</option>
+                        <option value="namkeen" class="food">Namkeen (Low-Oil)</option>
+                        <option value="oats" class="food">Oats</option>
+                        <option value="organic biscuits" class="food">Organic Biscuits</option>
+                        <option value="peanut butter" class="food">Peanut Butter</option>
+                        <option value="protein powder" class="food">Protein Powder (Plant-Based)</option>
+                        <option value="quinoa" class="food">Quinoa</option>
+                        <option value="khichdi" class="food">Ready-to-Eat Khichdi (Organic)</option>
+                        <option value="rice cakes" class="food">Rice Cakes</option>
+                        <option value="trail mix" class="food">Trail Mix</option>
+                        <option value="vegetable chips" class="food">Vegetable Chips (Vacuum Fried)</option>
+                        <option value="whole wheat bread" class="food">Whole Wheat Bread (Preservative-Free)</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="medicineSubcategoryGroup" style="display: none;">
+                    <label for="medicineSubcategory">Medicine Name:</label>
+                    <select id="medicineSubcategory" name="medicineSubcategory" required>
+                        <option value="">Select Medicine</option>
+                        <option value="combiflam">Combiflam</option>
+                        <option value="crocin">Crocin</option>
+                        <option value="diclofenac">Diclofenac</option>
+                        <option value="digene">Digene</option>
+                        <option value="gelusil">Gelusil</option>
+                        <option value="loperamide">Loperamide Hydrochloride</option>
+                        <option value="meftal-spas">Meftal Spas</option>
+                        <option value="paracetamol">Paracetamol</option>
+                        <option value="probiotic">Probiotic</option>
+                        <option value="saridon">Saridon</option>
+                        <option value="strepsils">Strepsils</option>
+                        <option value="vicks">Vicks</option>
+                        <option value="vicks-vaporub">Vicks VapoRub</option>
+                        <option value="volini">Volini</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="medicineInputGroup" style="display: none;">
+                    <label for="medicineName">Enter Medicine Name:</label>
+                    <input type="text" id="medicineName" name="medicineName" placeholder="e.g., Vicks">
+                </div>
+
+                <div class="form-group" id="imageUploadGroup">
+                    <label for="imageUpload">Upload Ingredient List:</label>
+                    <input type="file" id="imageUpload" name="imageUpload" accept="image/*">
+                </div>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Check the List</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div id="resultsModal" class="modal">
+        <div class="modal-content results-content">
+            <span class="close">&times;</span>
+            <h2>Scan Results</h2>
+            <div id="medicineResult" style="display: none;">
+                <h3 id="medicineAlternative"></h3>
+                <p class="signup-prompt">Want to Explore More? <a href="signup.html">Sign Up With Us</a></p>
+            </div>
+
+            <div id="ingredientResult">
+                <div class="results-container">
+                    <div class="harmless-ingredients">
+                        <h3>✅ Harmless Ingredients</h3>
+                        <ul id="harmlessList"></ul>
+                    </div>
+                    <div class="harmful-ingredients">
+                        <h3>❌ Harmful Ingredients</h3>
+                        <ul id="harmfulList"></ul>
+                        <div class="harmful-info-link">
+                            <span class="info-icon" id="harmfulInfoTrigger">❓ Know why these are harmful?</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="toxicity-level">
+                    <h3 id="toxicityMessage"></h3>
+                    <p class="signup-prompt">Want to Know Better Alternatives? <a href="signup.html">Sign Up With Us</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Harmful Ingredients Info Box -->
+    <div id="harmfulInfoBox" class="info-box">
+        <div class="info-box-content">
+            <span class="close-info-box">&times;</span>
+            <h3>Research References</h3>
+            <div class="info-box-links">
+                <p><strong>Parabens:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/16097138/" target="_blank">Study 1</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/29596967/" target="_blank">Review Update</a></p>
+                <p><strong>SLS:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/12694214/" target="_blank">Irritant Study</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/12641575/" target="_blank">Dose/Kinetics</a></p>
+                <p><strong>Triclosan:</strong> <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/consumer-antiseptic-wash-final-rule-questions-and-answers" target="_blank">FDA Q&A</a>, <a href="https://www.federalregister.gov/documents/2016/09/06/2016-21337/safety-and-effectiveness-of-consumer-antiseptics-topical-antimicrobial-drug-products-for" target="_blank">Final Rule</a></p>
+                <p><strong>Formaldehyde:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/35229319/" target="_blank">Contact Allergy Review</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/20136875/" target="_blank">In Cosmetics</a></p>
+                <p><strong>Benzene:</strong> <a href="https://www.fda.gov/food/environmental-contaminants-food/questions-and-answers-occurrence-benzene-soft-drinks-and-other-beverages" target="_blank">FDA Q&A</a>, <a href="https://en.wikipedia.org/wiki/Benzene_in_soft_drinks" target="_blank">Overview</a></p>
+                <p><strong>Phthalates:</strong> <a href="https://echa.europa.eu/-/endocrine-disrupting-properties-to-be-added-for-four-phthalates-in-the-authorisation-list" target="_blank">ECHA News</a>, <a href="https://foodpackagingforum.org/news/echa-assesses-regulatory-needs-of-phthalates-as-a-group" target="_blank">Regulatory Needs</a></p>
+                <p><strong>Synthetic Food Dyes:</strong> <a href="https://oehha.ca.gov/risk-assessment/synthetic-food-dye-risk-assessment" target="_blank">Risk Assessment</a>, <a href="https://oehha.ca.gov/risk-assessment/press-release/report-links-synthetic-food-dyes-hyperactivity-and-other-neurobehavioral-effects-children" target="_blank">Press Release</a></p>
+                <p><strong>HFCS:</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5747444/" target="_blank">Metabolic Dysregulation</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/20424937/" target="_blank">Metabolic Syndrome</a></p>
+                <p><strong>Trans Fat:</strong> <a href="https://www.who.int/teams/nutrition-and-food-safety/replace-trans-fat/validation-programme-for-trans-fat-elimination" target="_blank">WHO Program</a>, <a href="https://pubmed.ncbi.nlm.nih.gov/39111974/" target="_blank">Elimination</a></p>
+                <p><strong>Microbeads:</strong> <a href="https://pubmed.ncbi.nlm.nih.gov/33310543/" target="_blank">Actions Review</a>, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11587687/" target="_blank">In Cosmetics</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="scanner.js"></script>
+</body>
+</html>
