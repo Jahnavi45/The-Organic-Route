@@ -489,10 +489,10 @@ button {
 }
 
 @keyframes backgroundScroll {
-    0% { background-image: url('Organic1.jpeg'); }
-    33% { background-image: url('Organic12.jpeg'); }
-    66% { background-image: url('Organic13.jpeg'); }
-    100% { background-image: url('Organic1.jpeg'); }
+    0% { background-image: url('images/Organic1.jpeg'); }
+    33% { background-image: url('images/Organic12.jpeg'); }
+    66% { background-image: url('images/Organic13.jpeg'); }
+    100% { background-image: url('images/Organic1.jpeg'); }
 }
 
 .bg-home {
